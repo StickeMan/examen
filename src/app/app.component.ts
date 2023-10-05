@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'Examen 1 - Desarrollo para Dispositivos Inteligentes';
-}
+export class AppComponent {}

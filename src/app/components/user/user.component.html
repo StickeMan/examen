@@ -1,0 +1,19 @@
+<div>
+  <h2 class="text-white text-3xl text-center text-xl">Información de usuario</h2>
+</div>
+<div class="grid-cols-3 sm:grid md:grid-cols-3">
+  <div class="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white"></div>
+  <div
+    class="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white">
+    <div *ngFor="let user of userData" (click)="viewAge(user.birthday)">
+      <div class="p-6 text-center">
+        <button type="button" class="mb-2 text-xl leading-tight text-cyan-600 font-bold">{{ user.name }}</button>
+        <p>Su cumpleaños es en <a class="font-serif">"{{ user.birthday | date: 'MMM d, y' }}"</a></p>
+      </div>
+    </div>
+    <div class="text-center">
+      <div>{{ ageResult }}</div>
+      <div class="text-fuchsia-950 font-semibold">"{{ ageResult | comparative }}"</div>
+    </div>
+  </div>
+</div>
